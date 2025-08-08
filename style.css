@@ -465,12 +465,7 @@ body::after {
     max-width: 500px; /* Aumentado de 400px a 500px */
     height: 80%;
     max-height: 600px;
-    background: 
-        linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0.95)),
-        url('heart-stitch.gif');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0.95));
     border-radius: 25px;
     box-shadow: 
         0 25px 50px rgba(0, 0, 0, 0.2),
@@ -761,12 +756,6 @@ body::after {
         max-height: none;
         padding: 20px 15px;
         border-radius: 20px;
-        background: 
-            linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.9)),
-            url('heart-stitch.gif');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
     }
     
     .letter-card.show {
@@ -838,6 +827,17 @@ body::after {
         font-size: 0.95em;
     }
     
+    /* GIF de corazones optimizado para móviles */
+    .heart-gif {
+        max-width: 120px;
+        margin-top: 15px;
+    }
+    
+    .heart-gif-container {
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+    
     /* Botón de cerrar optimizado */
     .close-btn {
         top: 10px;
@@ -905,12 +905,6 @@ body::after {
         width: 95%;
         height: 95%;
         padding: 15px 10px;
-        background: 
-            linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.88)),
-            url('heart-stitch.gif');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
     }
     
     .letter-card.show {
@@ -935,6 +929,17 @@ body::after {
     
     .cake-gif {
         max-width: 180px;
+    }
+    
+    /* GIF de corazones para dispositivos muy pequeños */
+    .heart-gif {
+        max-width: 100px;
+        margin-top: 10px;
+    }
+    
+    .heart-gif-container {
+        margin-top: 10px;
+        margin-bottom: 8px;
     }
 }
 
@@ -1092,4 +1097,25 @@ body::after {
     .cake-gif {
         max-width: 250px;
     }
+}
+
+/* Estilos para el GIF de corazones al final del texto */
+.heart-gif-container {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.heart-gif {
+    max-width: 150px;
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+    filter: drop-shadow(0 3px 8px rgba(255, 107, 107, 0.2));
+    transition: transform 0.3s ease;
+}
+
+.heart-gif:hover {
+    transform: scale(1.05);
 }
