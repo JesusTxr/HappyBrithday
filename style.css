@@ -1,0 +1,1078 @@
+/* Estilos generales y fondo animado */
+body {
+    margin: 0;
+    font-family: 'Georgia', serif;
+    background: linear-gradient(-45deg, #f8cdda, #d0b7e2, #a0d2eb, #b3e5fc);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    height: 100vh;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Efectos de fondo románticos adicionales */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(255, 182, 193, 0.4) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 105, 180, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(255, 20, 147, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 90% 90%, rgba(255, 182, 193, 0.3) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 1;
+    animation: romanticGlow 8s ease-in-out infinite alternate;
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="50" font-size="20" fill="rgba(255,255,255,0.05)">❤</text></svg>') repeat;
+    background-size: 60px 60px;
+    animation: floatingPattern 20s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* Partículas románticas flotantes */
+.romantic-particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 3;
+}
+
+.particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: rgba(255, 182, 193, 0.6);
+    border-radius: 50%;
+    animation: particleFloat 12s infinite linear;
+}
+
+.particle:nth-child(1) { left: 10%; animation-delay: 0s; animation-duration: 15s; }
+.particle:nth-child(2) { left: 20%; animation-delay: 2s; animation-duration: 18s; }
+.particle:nth-child(3) { left: 30%; animation-delay: 4s; animation-duration: 12s; }
+.particle:nth-child(4) { left: 40%; animation-delay: 6s; animation-duration: 20s; }
+.particle:nth-child(5) { left: 50%; animation-delay: 8s; animation-duration: 16s; }
+.particle:nth-child(6) { left: 60%; animation-delay: 10s; animation-duration: 14s; }
+.particle:nth-child(7) { left: 70%; animation-delay: 12s; animation-duration: 17s; }
+.particle:nth-child(8) { left: 80%; animation-delay: 14s; animation-duration: 13s; }
+.particle:nth-child(9) { left: 90%; animation-delay: 16s; animation-duration: 19s; }
+.particle:nth-child(10) { left: 15%; animation-delay: 18s; animation-duration: 11s; }
+
+/* Estrellas brillantes */
+.sparkle {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    animation: sparkle 3s infinite ease-in-out;
+}
+
+.sparkle:nth-child(1) { left: 5%; top: 20%; animation-delay: 0s; }
+.sparkle:nth-child(2) { left: 25%; top: 15%; animation-delay: 0.5s; }
+.sparkle:nth-child(3) { left: 45%; top: 25%; animation-delay: 1s; }
+.sparkle:nth-child(4) { left: 65%; top: 10%; animation-delay: 1.5s; }
+.sparkle:nth-child(5) { left: 85%; top: 30%; animation-delay: 2s; }
+.sparkle:nth-child(6) { left: 15%; top: 60%; animation-delay: 2.5s; }
+.sparkle:nth-child(7) { left: 35%; top: 70%; animation-delay: 3s; }
+.sparkle:nth-child(8) { left: 55%; top: 80%; animation-delay: 3.5s; }
+.sparkle:nth-child(9) { left: 75%; top: 65%; animation-delay: 4s; }
+.sparkle:nth-child(10) { left: 95%; top: 75%; animation-delay: 4.5s; }
+
+/* Ondas románticas que se expanden */
+.romantic-waves {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 4;
+}
+
+.wave {
+    position: absolute;
+    border: 2px solid rgba(255, 182, 193, 0.3);
+    border-radius: 50%;
+    animation: waveExpand 6s infinite ease-out;
+}
+
+.wave:nth-child(1) {
+    width: 100px;
+    height: 100px;
+    animation-delay: 0s;
+}
+
+.wave:nth-child(2) {
+    width: 200px;
+    height: 200px;
+    animation-delay: 2s;
+}
+
+.wave:nth-child(3) {
+    width: 300px;
+    height: 300px;
+    animation-delay: 4s;
+}
+
+/* Pantalla de Carga */
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 0.8s ease-out;
+}
+
+.loading-content {
+    text-align: center;
+    color: #d14256;
+}
+
+.birthday-cake {
+    font-size: 80px;
+    margin-bottom: 20px;
+    animation: cakeBounce 2s ease-in-out infinite;
+}
+
+.loading-text {
+    font-size: 24px;
+    margin-bottom: 30px;
+    font-weight: 300;
+    animation: textPulse 2s ease-in-out infinite;
+}
+
+.loading-bar {
+    width: 300px;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    margin: 0 auto 30px;
+    overflow: hidden;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.loading-progress {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #ff6b6b, #ff8e8e);
+    border-radius: 10px;
+    transition: width 3s ease-out;
+    box-shadow: 0 0 10px rgba(255, 107, 107, 0.5);
+}
+
+.loading-hearts {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.loading-hearts span {
+    font-size: 24px;
+    animation: heartBeat 1.5s ease-in-out infinite;
+}
+
+.loading-hearts span:nth-child(1) { animation-delay: 0s; }
+.loading-hearts span:nth-child(2) { animation-delay: 0.3s; }
+.loading-hearts span:nth-child(3) { animation-delay: 0.6s; }
+.loading-hearts span:nth-child(4) { animation-delay: 0.9s; }
+.loading-hearts span:nth-child(5) { animation-delay: 1.2s; }
+
+@keyframes cakeBounce {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-10px) scale(1.1); }
+}
+
+@keyframes textPulse {
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 1; }
+}
+
+@keyframes heartBeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+}
+
+/* Ocultar pantalla de carga */
+#loading-screen.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Animaciones mejoradas */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes romanticGlow {
+    0% { 
+        opacity: 0.3;
+        transform: scale(1) rotate(0deg);
+    }
+    100% { 
+        opacity: 0.7;
+        transform: scale(1.1) rotate(5deg);
+    }
+}
+
+@keyframes floatingPattern {
+    0%, 100% { 
+        transform: translateY(0px) rotate(0deg);
+        opacity: 0.05;
+    }
+    50% { 
+        transform: translateY(-20px) rotate(180deg);
+        opacity: 0.1;
+    }
+}
+
+@keyframes particleFloat {
+    0% {
+        transform: translateY(100vh) translateX(0);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100px) translateX(50px);
+        opacity: 0;
+    }
+}
+
+@keyframes sparkle {
+    0%, 100% { 
+        transform: scale(1);
+        opacity: 0.3;
+    }
+    50% { 
+        transform: scale(1.5);
+        opacity: 1;
+    }
+}
+
+@keyframes waveExpand {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+.container {
+    display: none; /* Oculto por defecto hasta que termine la carga */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+/* Estilos del pastel */
+.cake-container {
+    position: relative;
+    animation: fadeIn 2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.cake {
+    width: 250px;
+    height: auto;
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.2));
+}
+
+/* Estilos para el GIF de Tenor */
+.tenor-gif-embed {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    filter: drop-shadow(0 5px 15px rgba(255, 107, 107, 0.3));
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.tenor-gif-embed:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.tenor-gif-embed iframe {
+    border-radius: 15px;
+    border: none;
+    width: 100%;
+    height: auto;
+    min-height: 200px;
+}
+
+/* Asegurar que el GIF se vea bien en dispositivos móviles */
+@media (max-width: 600px) {
+    .tenor-gif-embed {
+        max-width: 250px;
+    }
+    .tenor-gif-embed iframe {
+        min-height: 150px;
+    }
+}
+
+/* Estilos del mensaje inicial mejorado */
+.message-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px 40px;
+    border-radius: 25px;
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.15),
+        0 8px 16px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    margin-top: 30px;
+    animation: fadeIn 2s ease-in-out 1s backwards, messageGlow 3s ease-in-out infinite;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.message-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.message-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 
+        0 25px 50px rgba(0, 0, 0, 0.2),
+        0 12px 24px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.message-card:hover::before {
+    left: 100%;
+}
+
+.message-card h1 {
+    margin: 0 0 15px 0;
+    color: #ffffff;
+    font-size: 2.2em;
+    font-weight: 700;
+    text-shadow: 
+        0 2px 4px rgba(0, 0, 0, 0.5),
+        0 0 20px rgba(255, 255, 255, 0.3);
+    background: linear-gradient(45deg, #ffffff, #ffe6f0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+    z-index: 2;
+}
+
+.message-card p {
+    margin: 0;
+    color: #ffffff;
+    font-style: italic;
+    font-size: 1.1em;
+    line-height: 1.4;
+    position: relative;
+    z-index: 2;
+    text-shadow: 
+        0 1px 3px rgba(0, 0, 0, 0.5),
+        0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Efecto de brillo adicional */
+.message-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+    border-radius: 25px;
+}
+
+/* Contenedor principal que se deslizará */
+.main-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+    z-index: 10;
+}
+
+.main-container.slide-left {
+    transform: translateX(-20%); /* Reducido de -30% a -20% para menos deslizamiento */
+}
+
+/* Carta que emerge desde la derecha */
+.letter-card {
+    position: fixed;
+    top: 50%;
+    right: -100%; /* Inicia fuera de la pantalla por la derecha */
+    transform: translateY(-50%);
+    width: 70%; /* Aumentado de 60% a 70% para más espacio */
+    max-width: 500px; /* Aumentado de 400px a 500px */
+    height: 80%;
+    max-height: 600px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0.95));
+    border-radius: 25px;
+    box-shadow: 
+        0 25px 50px rgba(0, 0, 0, 0.2),
+        0 15px 35px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border: 3px solid rgba(255, 255, 255, 0.4);
+    padding: 40px;
+    box-sizing: border-box;
+    z-index: 1000; /* Aumentado para asegurar que esté por encima de todo */
+    opacity: 1;
+    visibility: visible;
+    transition: right 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+    overflow: hidden;
+}
+
+.letter-card.show {
+    right: 2%; /* Se posiciona en el espacio libre a la derecha */
+}
+
+/* Decoración de esquinas */
+.letter-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20px 20px, rgba(255, 182, 193, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at calc(100% - 20px) 20px, rgba(255, 182, 193, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 20px calc(100% - 20px), rgba(255, 182, 193, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at calc(100% - 20px) calc(100% - 20px), rgba(255, 182, 193, 0.3) 0%, transparent 50%);
+    pointer-events: none;
+    border-radius: 25px;
+}
+
+.letter-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #333;
+    text-align: left;
+    position: relative;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    line-height: 1.5;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.letter-content h2 {
+    color: #d14a80;
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(209, 74, 128, 0.2);
+    font-family: 'Georgia', 'Times New Roman', serif;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.letter-content h2::before,
+.letter-content h2::after {
+    content: '❀';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.6em;
+    color: #ff8fa3;
+}
+
+.letter-content h2::before {
+    left: -30px;
+}
+
+.letter-content h2::after {
+    right: -30px;
+}
+
+.letter-body {
+    flex: 1;
+    margin-bottom: 15px;
+    overflow-y: auto;
+}
+
+.letter-body p {
+    font-size: 0.95em;
+    line-height: 1.4;
+    margin-bottom: 12px;
+    color: #444;
+    text-align: justify;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    position: relative;
+    padding-left: 18px;
+}
+
+.letter-body p::before {
+    content: '♥';
+    position: absolute;
+    left: -12px;
+    top: 0;
+    color: #ff8fa3;
+    font-size: 0.7em;
+}
+
+.greeting {
+    font-size: 1.1em !important;
+    color: #d14a80 !important;
+    font-weight: 600 !important;
+    text-align: center !important;
+    margin-bottom: 15px !important;
+}
+
+.greeting::before {
+    display: none;
+}
+
+.main-message {
+    font-weight: 500;
+    color: #555 !important;
+}
+
+.support-message {
+    font-style: italic;
+    color: #666 !important;
+    background: rgba(255, 182, 193, 0.1);
+    padding: 12px;
+    border-radius: 8px;
+    border-left: 3px solid #ff8fa3;
+}
+
+.love-message {
+    font-weight: 500;
+    color: #444 !important;
+}
+
+.final-message {
+    font-size: 1em !important;
+    font-weight: 600 !important;
+    color: #d14a80 !important;
+    text-align: center !important;
+    margin-top: 15px !important;
+    padding: 10px;
+    background: linear-gradient(135deg, rgba(255, 182, 193, 0.2), rgba(255, 182, 193, 0.1));
+    border-radius: 12px;
+    border: 2px solid rgba(255, 182, 193, 0.3);
+}
+
+.final-message::before {
+    display: none;
+}
+
+.letter-content .signature {
+    margin-top: 15px;
+    text-align: right;
+    font-style: italic;
+    color: #d14a80;
+    padding-top: 15px;
+    border-top: 2px solid rgba(209, 74, 128, 0.2);
+    flex-shrink: 0;
+}
+
+.signature-line {
+    margin: 3px 0;
+    font-size: 1em;
+    color: #d14a80;
+}
+
+.signature-name {
+    margin: 3px 0;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #d14a80;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2.5em;
+    color: #aaa;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    z-index: 101;
+}
+
+.close-btn:hover {
+    color: #d14a80;
+}
+
+/* Efecto de brillo en la carta */
+.letter-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.8s ease;
+}
+
+.letter-card.show::before {
+    left: 100%;
+}
+
+/* Media query para dispositivos pequeños */
+@media (max-width: 600px) {
+    /* Ajustes generales para móviles */
+    body {
+        font-size: 14px;
+        overflow-x: hidden;
+    }
+    
+    /* Pantalla de carga optimizada para móviles */
+    #loading-screen {
+        padding: 20px;
+    }
+    
+    .loading-content {
+        width: 90%;
+        max-width: 300px;
+    }
+    
+    .birthday-cake {
+        font-size: 60px;
+        margin-bottom: 15px;
+    }
+    
+    .loading-text {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    
+    .loading-bar {
+        width: 250px;
+        height: 6px;
+    }
+    
+    .loading-hearts span {
+        font-size: 20px;
+    }
+    
+    /* Contenedor principal optimizado */
+    .container {
+        padding: 20px;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    /* Pastel optimizado para móviles */
+    .cake-container {
+        margin-bottom: 15px;
+    }
+    
+    .cake-gif {
+        max-width: 200px;
+        border-radius: 12px;
+    }
+    
+    /* Mensaje principal optimizado */
+    .message-card {
+        padding: 20px 25px;
+        margin-top: 20px;
+        border-radius: 20px;
+    }
+    
+    .message-card h1 {
+        font-size: 1.8em;
+        margin-bottom: 10px;
+        line-height: 1.2;
+    }
+    
+    .message-card p {
+        font-size: 1em;
+        line-height: 1.3;
+    }
+    
+    /* Carta optimizada para móviles */
+    .letter-card {
+        width: 90%; /* Más ancha en móviles para aprovechar el espacio */
+        height: 90%;
+        max-width: none;
+        max-height: none;
+        padding: 20px 15px;
+        border-radius: 20px;
+    }
+    
+    .letter-card.show {
+        right: 5%; /* Más margen para evitar que se pegue al borde */
+    }
+    
+    /* Contenido de la carta optimizado */
+    .letter-content {
+        padding-right: 5px;
+        gap: 10px;
+    }
+    
+    .letter-content h2 {
+        font-size: 1.6em;
+        margin-bottom: 15px;
+        line-height: 1.2;
+    }
+    
+    .letter-content h2::before,
+    .letter-content h2::after {
+        font-size: 0.4em;
+    }
+    
+    .letter-content h2::before {
+        left: -20px;
+    }
+    
+    .letter-content h2::after {
+        right: -20px;
+    }
+    
+    .letter-body {
+        margin-bottom: 10px;
+    }
+    
+    .letter-body p {
+        font-size: 0.9em;
+        line-height: 1.3;
+        margin-bottom: 8px;
+        padding-left: 12px;
+    }
+    
+    .greeting {
+        font-size: 1em !important;
+        margin-bottom: 10px !important;
+    }
+    
+    .support-message {
+        padding: 8px;
+        border-radius: 6px;
+    }
+    
+    .final-message {
+        font-size: 0.9em !important;
+        padding: 8px;
+        margin-top: 10px !important;
+    }
+    
+    .letter-content .signature {
+        margin-top: 10px;
+        padding-top: 10px;
+    }
+    
+    .signature-line {
+        font-size: 0.9em;
+    }
+    
+    .signature-name {
+        font-size: 0.95em;
+    }
+    
+    /* Botón de cerrar optimizado */
+    .close-btn {
+        top: 10px;
+        right: 15px;
+        font-size: 2em;
+    }
+    
+    /* Contenedor principal deslizante optimizado */
+    .main-container.slide-left {
+        transform: translateX(-10%); /* Menos deslizamiento en móviles */
+    }
+    
+    /* Corazones flotantes optimizados */
+    .heart {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .heart::before,
+    .heart::after {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .heart::before {
+        top: -10px;
+    }
+    
+    .heart::after {
+        left: 10px;
+    }
+    
+    /* Partículas optimizadas */
+    .particle {
+        width: 3px;
+        height: 3px;
+    }
+    
+    /* Estrellas optimizadas */
+    .sparkle {
+        width: 1.5px;
+        height: 1.5px;
+    }
+    
+    /* Ondas optimizadas */
+    .wave:nth-child(1) {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .wave:nth-child(2) {
+        width: 160px;
+        height: 160px;
+    }
+    
+    .wave:nth-child(3) {
+        width: 240px;
+        height: 240px;
+    }
+}
+
+/* Media query para dispositivos muy pequeños */
+@media (max-width: 400px) {
+    .letter-card {
+        width: 95%;
+        height: 95%;
+        padding: 15px 10px;
+    }
+    
+    .letter-card.show {
+        right: 2.5%;
+    }
+    
+    .letter-content h2 {
+        font-size: 1.4em;
+    }
+    
+    .letter-body p {
+        font-size: 0.85em;
+    }
+    
+    .message-card h1 {
+        font-size: 1.6em;
+    }
+    
+    .message-card p {
+        font-size: 0.9em;
+    }
+    
+    .cake-gif {
+        max-width: 180px;
+    }
+}
+
+/* Efecto de brillo que se mueve */
+.romantic-shine {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 5;
+    background: linear-gradient(
+        45deg,
+        transparent 0%,
+        transparent 40%,
+        rgba(255, 255, 255, 0.1) 50%,
+        transparent 60%,
+        transparent 100%
+    );
+    animation: shineMove 8s infinite linear;
+}
+
+@keyframes shineMove {
+    0% {
+        transform: translateX(-100%) translateY(-100%);
+    }
+    100% {
+        transform: translateX(100%) translateY(100%);
+    }
+}
+
+/* Estilos y animación para los corazones mejorados */
+.heart {
+    position: absolute;
+    bottom: -50px;
+    width: 25px;
+    height: 25px;
+    background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+    transform: rotate(-45deg);
+    animation: floatUp 12s infinite;
+    opacity: 0.8;
+    box-shadow: 0 0 10px rgba(255, 107, 107, 0.4);
+    filter: drop-shadow(0 0 5px rgba(255, 107, 107, 0.3));
+}
+
+.heart::before,
+.heart::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(255, 107, 107, 0.3);
+}
+
+.heart::before {
+    top: -12.5px;
+    left: 0;
+}
+
+.heart::after {
+    top: 0;
+    left: 12.5px;
+}
+
+/* Variaciones de corazones para más variedad */
+.heart:nth-child(3n+1) {
+    background: linear-gradient(45deg, #ff8e8e, #ffb3b3);
+    animation-duration: 15s;
+    animation-delay: 0s;
+}
+
+.heart:nth-child(3n+2) {
+    background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+    animation-duration: 18s;
+    animation-delay: 2s;
+}
+
+.heart:nth-child(3n+3) {
+    background: linear-gradient(45deg, #ff4757, #ff6b6b);
+    animation-duration: 20s;
+    animation-delay: 4s;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(-45deg) scale(0.8);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+        transform: translateY(-10vh) rotate(-45deg) scale(1);
+    }
+    50% {
+        transform: translateY(-50vh) rotate(-45deg) scale(1.1);
+        opacity: 0.8;
+    }
+    90% {
+        opacity: 0.6;
+        transform: translateY(-90vh) rotate(-45deg) scale(0.9);
+    }
+    100% {
+        transform: translateY(-120vh) rotate(-45deg) scale(0.5);
+        opacity: 0;
+    }
+}
+
+/* Animaciones de entrada */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Animación sutil para el mensaje */
+@keyframes messageGlow {
+    0%, 100% {
+        box-shadow: 
+            0 20px 40px rgba(0, 0, 0, 0.15),
+            0 8px 16px rgba(0, 0, 0, 0.1),
+            inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        background: rgba(255, 255, 255, 0.1);
+    }
+    50% {
+        box-shadow: 
+            0 20px 40px rgba(0, 0, 0, 0.18),
+            0 8px 16px rgba(0, 0, 0, 0.12),
+            inset 0 1px 0 rgba(255, 255, 255, 0.25);
+        background: rgba(255, 255, 255, 0.12);
+    }
+}
+
+/* Estilos para el GIF local */
+.cake-gif {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    filter: drop-shadow(0 5px 15px rgba(255, 107, 107, 0.3));
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.cake-gif:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* Asegurar que el GIF se vea bien en dispositivos móviles */
+@media (max-width: 600px) {
+    .cake-gif {
+        max-width: 250px;
+    }
+}
